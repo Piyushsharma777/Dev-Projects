@@ -7,27 +7,53 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <style>
         *{
             margin: 0;padding: 0;
         }
         body{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 40px 0px;
-            flex-wrap: wrap;
-            gap: 20px;
-            flex-direction: row;
             background-color: #0f0f0f;
         }
+        .card{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 15px 0px;
+            flex-wrap: wrap;
+            flex-direction: row;
+            background-color: #0f0f0f;
+            
+        }
+        .nav{
+            color: white;
+            background-color: #241f1f;
+            display: flex;
+            align-items: center;
+            padding: 5px;       
+            justify-content: center;
+            font-family: "Roboto", sans-serif;
+        }
+        .nav h1{
+            font-size: 30px;
+        }
         .darkcard
-        {
+        {  
             height: 350px;
             background-color: #0f0f0f;
-            width: 390px;
+            width: 370px;
             text-align: center;
             border-radius: 10px;
+        }
+        .thumb button{
+            padding: 0;
+            border: none;
+            border-radius: 50px;
+        }
+        .btn:hover{
+            border: none;
+            border-radius: 50px;
+
         }
         .thumb img{
             width: 100%;
@@ -62,7 +88,7 @@
         .title span{
             display: block;
             margin: 0px 50px;
-            padding-bottom: 4px;
+            padding-bottom: 2px;
             color: #aaaaaa;
             font-family: "Roboto", sans-serif;
            font-size: 14px;
@@ -91,9 +117,13 @@
     </style>
 </head>
 <body>
+    <div class="nav">
+        <h1>News Live Streaming</h1>
+    </div>
+    <div class="card">
     <div class="darkcard">
         <div class="thumb">
-            <img src="https://i.ytimg.com/vi/Nq2wYlWFucg/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCRZezLggwj_15_ZdahM2475pum4g" alt="">
+            <button type="button" class="btn btn-primary video-btn" data-bs-toggle="modal" data-src="watch.html?id=Nq2wYlWFucg" data-bs-target="#watchModal"><img src="https://i.ytimg.com/vi/Nq2wYlWFucg/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCRZezLggwj_15_ZdahM2475pum4g" alt=""></button>
         </div>
         <div class="logo">
             <img src="https://yt3.ggpht.com/ytc/AIdro_k22WD0nJUraLRHUzP0_oLMcj70-2Kg68R4pbrKkSI=s68-c-k-c0x00ffffff-no-rj" alt="">
@@ -107,45 +137,145 @@
     </div>
     <div class="darkcard">
         <div class="thumb">
-            <img src="https://i.ytimg.com/vi/Nq2wYlWFucg/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCRZezLggwj_15_ZdahM2475pum4g" alt="">
+            <button type="button" class="btn btn-primary video-btn" data-bs-toggle="modal" data-src="watch.html?id=nyd-xznCpJc" data-bs-target="#watchModal"><img src="https://i.ytimg.com/vi/nyd-xznCpJc/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB877iA4NZR0zDzA_SIO97eQInoag" alt=""></button>
         </div>
         <div class="logo">
-            <img src="https://yt3.ggpht.com/ytc/AIdro_k22WD0nJUraLRHUzP0_oLMcj70-2Kg68R4pbrKkSI=s68-c-k-c0x00ffffff-no-rj" alt="">
-            <span>Aaj Tak LIVE TV: Rahul Gandhi | PM Modi | Sandeshkhali | NDA vs INDIA | Bihar</span>
+            <img src="https://yt3.ggpht.com/ytc/AIdro_mRQ8hCjv_sQNiDN-iQYr7hzCC42QDWx771vyeKDks=s68-c-k-c0x00ffffff-no-rj" alt="">
+            <span>ABP NEWS LIVE 24/7: Lok Sabha Elections 2024 | Congress | BJP | Modi |</span>
         </div>
         <div class="title">
-            <span>Aaj Tak</span>
-            <span>27K watching</span>
+            <span>ABP News</span>
+            <span>1.6K watching</span>
             <span><svg xmlns="http://www.w3.org/2000/svg" height="10" viewBox="0 0 16 16" width="10" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;width: 100%; height: 100%; fill: currentcolor;"><path d="M9 8c0 .55-.45 1-1 1s-1-.45-1-1 .45-1 1-1 1 .45 1 1Zm1.11 2.13.71.71C11.55 10.11 12 9.11 12 8c0-1.11-.45-2.11-1.18-2.84l-.71.71c.55.55.89 1.3.89 2.13 0 .83-.34 1.58-.89 2.13Zm-4.93.71.71-.71C5.34 9.58 5 8.83 5 8c0-.83.34-1.58.89-2.13l-.71-.71C4.45 5.89 4 6.89 4 8c0 1.11.45 2.11 1.18 2.84Zm7.05 1.41.71.71C14.21 11.69 15 9.94 15 8s-.79-3.69-2.06-4.96l-.71.71C13.32 4.84 14 6.34 14 8c0 1.66-.68 3.16-1.77 4.25Zm-9.17.71.71-.71C2.68 11.16 2 9.66 2 8c0-1.66.68-3.16 1.77-4.25l-.71-.71C1.79 4.31 1 6.06 1 8s.79 3.69 2.06 4.96Z"></path></svg>Live</span>
         </div>
     </div>
     <div class="darkcard">
         <div class="thumb">
-            <img src="https://i.ytimg.com/vi/Nq2wYlWFucg/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCRZezLggwj_15_ZdahM2475pum4g" alt="">
+            <button type="button" class="btn btn-primary video-btn" data-bs-toggle="modal" data-src="watch.html?id=TPcmrPrygDc" data-bs-target="#watchModal"><img src="https://i.ytimg.com/vi/TPcmrPrygDc/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCU3AP_9dzMplk6AcE9mdSC9rLy_A" alt=""></button>
         </div>
         <div class="logo">
-            <img src="https://yt3.ggpht.com/ytc/AIdro_k22WD0nJUraLRHUzP0_oLMcj70-2Kg68R4pbrKkSI=s68-c-k-c0x00ffffff-no-rj" alt="">
-            <span>Aaj Tak LIVE TV: Rahul Gandhi | PM Modi | Sandeshkhali | NDA vs INDIA | Bihar</span>
+            <img src="https://yt3.ggpht.com/vZFILuFswtjUIU5oRCc79rxRdML5A_c-D_6AdvgAAd0hqSrJihyJFkT_CTSjYwSrHgiPAAozebY=s68-c-k-c0x00ffffff-no-rj" alt="">
+            <span>Zee News TV LIVE: PM Modi Assam Visit | Maha Shivratri | PM Modi Kashmir Speech</span>
         </div>
         <div class="title">
-            <span>Aaj Tak</span>
-            <span>27K watching</span>
+            <span>Zee News</span>
+            <span>706 watching</span>
             <span><svg xmlns="http://www.w3.org/2000/svg" height="10" viewBox="0 0 16 16" width="10" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;width: 100%; height: 100%; fill: currentcolor;"><path d="M9 8c0 .55-.45 1-1 1s-1-.45-1-1 .45-1 1-1 1 .45 1 1Zm1.11 2.13.71.71C11.55 10.11 12 9.11 12 8c0-1.11-.45-2.11-1.18-2.84l-.71.71c.55.55.89 1.3.89 2.13 0 .83-.34 1.58-.89 2.13Zm-4.93.71.71-.71C5.34 9.58 5 8.83 5 8c0-.83.34-1.58.89-2.13l-.71-.71C4.45 5.89 4 6.89 4 8c0 1.11.45 2.11 1.18 2.84Zm7.05 1.41.71.71C14.21 11.69 15 9.94 15 8s-.79-3.69-2.06-4.96l-.71.71C13.32 4.84 14 6.34 14 8c0 1.66-.68 3.16-1.77 4.25Zm-9.17.71.71-.71C2.68 11.16 2 9.66 2 8c0-1.66.68-3.16 1.77-4.25l-.71-.71C1.79 4.31 1 6.06 1 8s.79 3.69 2.06 4.96Z"></path></svg>Live</span>
         </div>
     </div>
     <div class="darkcard">
         <div class="thumb">
-            <img src="https://i.ytimg.com/vi/Nq2wYlWFucg/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCRZezLggwj_15_ZdahM2475pum4g" alt="">
+            <button type="button" class="btn btn-primary video-btn" data-bs-toggle="modal" data-src="watch.html?id=qfrocHBy6RQ" data-bs-target="#watchModal"><img src="https://i.ytimg.com/vi/qfrocHBy6RQ/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAKQ0rj_tbQ56H8fWz_MB-xDS4bjQ" alt=""></button>
         </div>
         <div class="logo">
-            <img src="https://yt3.ggpht.com/ytc/AIdro_k22WD0nJUraLRHUzP0_oLMcj70-2Kg68R4pbrKkSI=s68-c-k-c0x00ffffff-no-rj" alt="">
-            <span>Aaj Tak LIVE TV: Rahul Gandhi | PM Modi | Sandeshkhali | NDA vs INDIA | Bihar</span>
+            <img src="https://yt3.ggpht.com/zv_TrbiRA-GpTz7DyYGCX08_XUcPUuVD_lcApKXQU18y3FBilr7b6CAy4Y4fVyVeiXk_JcCrg3A=s88-c-k-c0x00ffffff-no-rj" alt="">
+            <span>Republic Bharat LIVE: PM Modi At Republic Summit LIVE | Sandeshkhali News</span>
         </div>
         <div class="title">
-            <span>Aaj Tak</span>
-            <span>27K watching</span>
+            <span>Republic Bharat</span>
+            <span>1.9K watching</span>
             <span><svg xmlns="http://www.w3.org/2000/svg" height="10" viewBox="0 0 16 16" width="10" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;width: 100%; height: 100%; fill: currentcolor;"><path d="M9 8c0 .55-.45 1-1 1s-1-.45-1-1 .45-1 1-1 1 .45 1 1Zm1.11 2.13.71.71C11.55 10.11 12 9.11 12 8c0-1.11-.45-2.11-1.18-2.84l-.71.71c.55.55.89 1.3.89 2.13 0 .83-.34 1.58-.89 2.13Zm-4.93.71.71-.71C5.34 9.58 5 8.83 5 8c0-.83.34-1.58.89-2.13l-.71-.71C4.45 5.89 4 6.89 4 8c0 1.11.45 2.11 1.18 2.84Zm7.05 1.41.71.71C14.21 11.69 15 9.94 15 8s-.79-3.69-2.06-4.96l-.71.71C13.32 4.84 14 6.34 14 8c0 1.66-.68 3.16-1.77 4.25Zm-9.17.71.71-.71C2.68 11.16 2 9.66 2 8c0-1.66.68-3.16 1.77-4.25l-.71-.71C1.79 4.31 1 6.06 1 8s.79 3.69 2.06 4.96Z"></path></svg>Live</span>
         </div>
     </div>
-</body>
+    <div class="darkcard">
+        <div class="thumb">
+            <button type="button" class="btn btn-primary video-btn" data-bs-toggle="modal" data-src="watch.html?id=Xmm3Kr5P1Uw" data-bs-target="#watchModal"><img src="https://i.ytimg.com/vi/Xmm3Kr5P1Uw/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAdlM2vWMXwNehUygstywevWrb0YA" alt=""></button>
+        </div>
+        <div class="logo">
+            <img src="https://yt3.ggpht.com/xvSPpZd-kEa6T3KgnlWv5YYkzLxf9UjWwnjlVBhtJR67qcipOq0sBjrgOd5_46mdoCE3cglT_w=s68-c-k-c0x00ffffff-no-rj" alt="">
+            <span>India TV Live: PM Modi Visit Assam | Congress Candidate List |</span>
+        </div>
+        <div class="title">
+            <span>India TV</span>
+            <span>2.5K watching</span>
+            <span><svg xmlns="http://www.w3.org/2000/svg" height="10" viewBox="0 0 16 16" width="10" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;width: 100%; height: 100%; fill: currentcolor;"><path d="M9 8c0 .55-.45 1-1 1s-1-.45-1-1 .45-1 1-1 1 .45 1 1Zm1.11 2.13.71.71C11.55 10.11 12 9.11 12 8c0-1.11-.45-2.11-1.18-2.84l-.71.71c.55.55.89 1.3.89 2.13 0 .83-.34 1.58-.89 2.13Zm-4.93.71.71-.71C5.34 9.58 5 8.83 5 8c0-.83.34-1.58.89-2.13l-.71-.71C4.45 5.89 4 6.89 4 8c0 1.11.45 2.11 1.18 2.84Zm7.05 1.41.71.71C14.21 11.69 15 9.94 15 8s-.79-3.69-2.06-4.96l-.71.71C13.32 4.84 14 6.34 14 8c0 1.66-.68 3.16-1.77 4.25Zm-9.17.71.71-.71C2.68 11.16 2 9.66 2 8c0-1.66.68-3.16 1.77-4.25l-.71-.71C1.79 4.31 1 6.06 1 8s.79 3.69 2.06 4.96Z"></path></svg>Live</span>
+        </div>
+    </div>
+    <div class="darkcard">
+        <div class="thumb">
+            <button type="button" class="btn btn-primary video-btn" data-bs-toggle="modal" data-src="watch.html?id=HBorWH77wPs" data-bs-target="#watchModal"><img src="https://i.ytimg.com/vi/HBorWH77wPs/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAbdVbOspiEaeOzo7ISOPVlz9qb6w" alt=""></button>
+        </div>
+        <div class="logo">
+            <img src="https://yt3.ggpht.com/dt_7th6zZPzSIeMfBgvkJBgu3NZ4YRZlqFuxLAKsHY7SljR0yLkcXZE-izL_Ds0NY5v1N7eW=s68-c-k-c0x00ffffff-no-rj" alt="">
+            <span>News18 India LIVE TV : Lok Sabha Elections 2024 | PM Modi</span>
+        </div>
+        <div class="title">
+            <span>News18 India</span>
+            <span>700 watching</span>
+            <span><svg xmlns="http://www.w3.org/2000/svg" height="10" viewBox="0 0 16 16" width="10" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;width: 100%; height: 100%; fill: currentcolor;"><path d="M9 8c0 .55-.45 1-1 1s-1-.45-1-1 .45-1 1-1 1 .45 1 1Zm1.11 2.13.71.71C11.55 10.11 12 9.11 12 8c0-1.11-.45-2.11-1.18-2.84l-.71.71c.55.55.89 1.3.89 2.13 0 .83-.34 1.58-.89 2.13Zm-4.93.71.71-.71C5.34 9.58 5 8.83 5 8c0-.83.34-1.58.89-2.13l-.71-.71C4.45 5.89 4 6.89 4 8c0 1.11.45 2.11 1.18 2.84Zm7.05 1.41.71.71C14.21 11.69 15 9.94 15 8s-.79-3.69-2.06-4.96l-.71.71C13.32 4.84 14 6.34 14 8c0 1.66-.68 3.16-1.77 4.25Zm-9.17.71.71-.71C2.68 11.16 2 9.66 2 8c0-1.66.68-3.16 1.77-4.25l-.71-.71C1.79 4.31 1 6.06 1 8s.79 3.69 2.06 4.96Z"></path></svg>Live</span>
+        </div>
+    </div>
+     <div class="darkcard">
+        <div class="thumb">
+            <button type="button" class="btn btn-primary video-btn" data-bs-toggle="modal" data-src="watch.html?id=bzmwHag6Nno" data-bs-target="#watchModal"><img src="https://i.ytimg.com/vi/bzmwHag6Nno/hq720.jpg?sqp=-…AFwAcABBg==&rs=AOn4CLCe_whSajkFikwWZtkBgl-8sYY-_Q" alt=""></button>
+        </div>
+        <div class="logo">
+            <img src="https://yt3.ggpht.com/SWNN1d7b5gNd4JvnmP3MkN8B-LBqDrCKkal_FrToeWbxcJ4UYGRsuko1DrfNMidcbUnEmG33VA=s68-c-k-c0x00ffffff-no-rj" alt="">
+            <span>DD News 24x7 | Breaking News & other Live Updates | News in Hindi</span>
+        </div>
+        <div class="title">
+            <span>DD News</span>
+            <span>300 watching</span>
+            <span><svg xmlns="http://www.w3.org/2000/svg" height="10" viewBox="0 0 16 16" width="10" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;width: 100%; height: 100%; fill: currentcolor;"><path d="M9 8c0 .55-.45 1-1 1s-1-.45-1-1 .45-1 1-1 1 .45 1 1Zm1.11 2.13.71.71C11.55 10.11 12 9.11 12 8c0-1.11-.45-2.11-1.18-2.84l-.71.71c.55.55.89 1.3.89 2.13 0 .83-.34 1.58-.89 2.13Zm-4.93.71.71-.71C5.34 9.58 5 8.83 5 8c0-.83.34-1.58.89-2.13l-.71-.71C4.45 5.89 4 6.89 4 8c0 1.11.45 2.11 1.18 2.84Zm7.05 1.41.71.71C14.21 11.69 15 9.94 15 8s-.79-3.69-2.06-4.96l-.71.71C13.32 4.84 14 6.34 14 8c0 1.66-.68 3.16-1.77 4.25Zm-9.17.71.71-.71C2.68 11.16 2 9.66 2 8c0-1.66.68-3.16 1.77-4.25l-.71-.71C1.79 4.31 1 6.06 1 8s.79 3.69 2.06 4.96Z"></path></svg>Live</span>
+        </div>
+    </div>
+    <div class="darkcard">
+        <div class="thumb">
+            <button type="button" class="btn btn-primary video-btn" data-bs-toggle="modal" data-src="watch.html?id=bzmwHag6Nno" data-bs-target="#watchModal"><img src="https://i.ytimg.com/vi/c0HOSjlniKs/hqdefault_live.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDOIku_ESCxb1zAUuUh5014EnMYrA" alt=""></button>
+        </div>
+        <div class="logo">
+            <img src="https://yt3.googleusercontent.com/5UnQaENeR3Y9WgYc94GCLzByBaweS-SlFFfjsIvPm_yWD0QOWs94EqmI-6GWhrd5S05DyWme=s68-c-k-c0x00ffffff-no-rj" alt="">
+            <span>DD India 24x7 | Breaking News & Other live updates from around the World</span>
+        </div>
+        <div class="title">
+            <span>DD India</span>
+            <span>29 watching</span>
+            <span><svg xmlns="http://www.w3.org/2000/svg" height="10" viewBox="0 0 16 16" width="10" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;width: 100%; height: 100%; fill: currentcolor;"><path d="M9 8c0 .55-.45 1-1 1s-1-.45-1-1 .45-1 1-1 1 .45 1 1Zm1.11 2.13.71.71C11.55 10.11 12 9.11 12 8c0-1.11-.45-2.11-1.18-2.84l-.71.71c.55.55.89 1.3.89 2.13 0 .83-.34 1.58-.89 2.13Zm-4.93.71.71-.71C5.34 9.58 5 8.83 5 8c0-.83.34-1.58.89-2.13l-.71-.71C4.45 5.89 4 6.89 4 8c0 1.11.45 2.11 1.18 2.84Zm7.05 1.41.71.71C14.21 11.69 15 9.94 15 8s-.79-3.69-2.06-4.96l-.71.71C13.32 4.84 14 6.34 14 8c0 1.66-.68 3.16-1.77 4.25Zm-9.17.71.71-.71C2.68 11.16 2 9.66 2 8c0-1.66.68-3.16 1.77-4.25l-.71-.71C1.79 4.31 1 6.06 1 8s.79 3.69 2.06 4.96Z"></path></svg>Live</span>
+        </div>
+    </div>
+
+</div>
+<div class="modal fade" id="watchModal">
+    <div class="modal-dialog" role="document">
+    <div class="modal-content">
+    <div class="modal-body">
+    <div class="ratio ratio-16x9">
+    <iframe class="embed-responsive-item" src="" id="video" allowscriptaccess="always" allow="autoplay"></iframe>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script>
+    $(document).ready(function(){
+    // Searchbar logic
+    $('#channelSearch').on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $(".card-parent").filter(function() {
+    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+    });
+    // Gets the video src from the data-src on each button
+    var $videoSrc;
+    $('.video-btn').click(function () {
+    $videoSrc = $(this).data("src");
+    });
+    // when the modal is opened, play it
+    $('#watchModal').on('shown.bs.modal', function (e) {
+    $("#video").attr('src', $videoSrc);
+    });
+    // stop playing the video when modal is closed
+    $('#watchModal').on('hide.bs.modal', function (e) {
+    // a poor man's stop video
+    $("#video").removeAttr('src');
+    });
+    });
+    </script>
+    </body>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/lazysizes.min.js"></script>
+    <script src="js/iconify.min.js"></script>
+
 </html>
