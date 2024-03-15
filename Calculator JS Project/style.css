@@ -47,3 +47,18 @@
         form input.operator{
             color: #33ffd8;
         }
+       @media only screen and (max-width: 400px) {
+            .calculator form input {
+            border: 0;
+            outline: 0;
+            width: 35px;
+            height: 35px;
+            font-size: 15px;
+            margin: 5px;
+
+        }
+        form input.equal {
+            width: 78px;
+        }
+        
+        }
