@@ -97,3 +97,14 @@
                 padding: 12px 18px;
             }
         }
+@media screen and (max-width: 400px) {
+        .display {
+        padding: 10px;
+    }
+    .display input {
+        width: 60%;
+    }
+    .container button {
+        padding: 10px 16px;
+    }
+}
