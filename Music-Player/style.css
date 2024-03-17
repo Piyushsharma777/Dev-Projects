@@ -97,10 +97,13 @@ nav .circle{
     color: #fff;
 }
 @media screen and (max-width: 468px) {
+    .container{
+    background: #ffe0e5;
+    }
     .music-player{
     background: #ffe0e5;
     width: 100%;
     border-radius: 0;
-    height: 100vh;
+    height: 90vh;
 }
 }
