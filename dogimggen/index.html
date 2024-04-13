@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Dog Images</title>
+    <style>
+        *{
+            margin: 0;padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            text-align: center;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            font-family: cursive;
+            align-items: center;
+
+        }
+        div{
+            background-color: #18181b;
+            display: flex;
+            padding: 0;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+            width: 70vw;
+            flex-direction: column;
+            color: rgba(29, 205, 102, 0.934);
+            border-radius: 30px;
+            margin-top: 70px;
+            position: relative;
+        }
+        h1{
+            font-size: 2.8rem;
+        }
+        img{
+            height: 400px;
+            border-radius: 30px;
+            /* aspect-ratio: 16/9;
+            object-fit: cover;
+            object-position: center; */
+            border: 5px solid rgba(29, 205, 102, 0.934);
+            max-width: 100%; /* Set maximum width to 100% of parent div */
+            max-height: 100%; /* Set maximum height to 100% of parent div */
+            object-fit: contain;
+
+        }
+        button{
+            border: 3px solid rgb(29, 205, 102);
+            font-size: 1.7rem;
+            margin: 8px;
+            font-family: cursive;
+            padding: 5px 10px;
+            /* border: none; */
+            border-radius: 10px;
+
+        }
+
+    </style>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <div>
+        <h1>Get Random Dog Images</h1>
+    <button>Show</button>
+    <img id="result" src="https://images.dog.ceo/breeds/australian-shepherd/pepper.jpg"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
