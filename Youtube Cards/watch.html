@@ -1,4 +1,5 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
   <title>Shree Ram</title>
@@ -14,24 +15,25 @@
   <script src="https://cdn.jsdelivr.net/npm/hls.js@1.1.4/dist/hls.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
   <style>
-    *{
+    * {
       margin: 0;
       padding: 0;
     }
+
     html {
       font-family: Poppins;
       background: #000;
       margin: 0;
-      padding: 0
+      padding: 0;
     }
 
     :root {
-        --plyr-color-main: rgb(102 116 204);
-        --plyr-video-control-color: #e8ffba;
+      --plyr-color-main: rgb(102 116 204);
+      --plyr-video-control-color: #e8ffba;
     }
-    body{
-          -webkit-tap-highlight-color: transparent;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+    body {
+      -webkit-tap-highlight-color: transparent;
     }
 
     .plyr__video-wrapper::after {
@@ -45,29 +47,26 @@
       background: no-repeat;
       background-size: 40px, auto, auto;
     }
-    .plyr__video-embed{
-      /* border-radius: 17px; */
 
+    .plyr__video-embed {
+      /* border-radius: 17px; */
     }
   </style>
+</head>
 
 <body>
   <div class="plyr__video-embed" id="m3u8-url" data-plyr-provider="youtube" data-plyr-embed-id=""></div>
   <script>
-     var urlParams = new URLSearchParams(window.location.search);
-        var maxvalue=urlParams.get('id');
-
-
-  document.getElementById("m3u8-url").setAttribute("data-plyr-embed-id",maxvalue);
+    var urlParams = new URLSearchParams(window.location.search);
+    var maxvalue = urlParams.get('id');
+    document.getElementById("m3u8-url").setAttribute("data-plyr-embed-id", maxvalue);
   </script>
-
   <script src="https://cdn.plyr.io/3.6.4/plyr.js"></script>
   <script>
-        document.addEventListener('DOMContentLoaded', () => {
+    document.addEventListener('DOMContentLoaded', () => {
       const players = Array.from(document.querySelectorAll('[data-plyr-provider]'));
       players.forEach(playerElement => new Plyr(playerElement));
     });
-
   </script>
 </body>
 
