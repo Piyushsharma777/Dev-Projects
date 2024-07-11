@@ -36,6 +36,13 @@
       -webkit-tap-highlight-color: transparent;
     }
 
+    body:fullscreen,
+    body:-webkit-full-screen,
+    body:-moz-full-screen,
+    body:-ms-fullscreen {
+      outline: none !important;
+    }
+
     .plyr__video-wrapper::after {
       position: absolute;
       top: 15px;
@@ -50,8 +57,6 @@
 
     .plyr__video-embed {
       /* border-radius: 17px; */
-          -webkit-tap-highlight-color: transparent;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     }
   </style>
 </head>
